@@ -11,8 +11,8 @@
 @interface trackInfo : NSObject
 -(id) initWithUrlImg:(NSString*)urlImg AndWith:(NSString*)titleSong;
 @property (strong, nonatomic) NSString *titreMp3;
-@property (strong, nonatomic) NSString *urlPicture;
-@property (strong, nonatomic) NSString *urlMp3;
+@property (strong, nonatomic) NSURL *urlPicture;
+@property (strong, nonatomic) NSURL *urlMp3;
 @property (strong, nonatomic) NSMutableData *dataPicture;
 @property (strong, nonatomic) NSMutableData *dataMp3;
 @end
