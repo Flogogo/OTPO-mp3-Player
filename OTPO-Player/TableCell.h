@@ -10,6 +10,9 @@
 @protocol TableCellDelegate
 @optional
 - (void) deleteButtonTappedOnCell:(id)sender;
+- (void) playSong:(id)sender;
+- (void) stopSong:(id)sender;
+
 @end
 
 @interface TableCell : UITableViewCell

@@ -14,9 +14,6 @@
 @property (strong, nonatomic) downloadManager *downloadManager;
 @property (strong, nonatomic) NSMutableArray *arrayOfTrack;
 @property (strong, nonatomic) AVAudioPlayer *audioPlayer;
-- (IBAction)play:(id)sender;
-- (IBAction)stop:(id)sender;
-
 @end
 
 @implementation homeViewController
@@ -85,9 +82,9 @@
 
 // When we push delete button we remove one cell (We use delegate objet here).
 - (void)deleteButtonTappedOnCell:(id)sender {
-    NSIndexPath *indepath = [self.tableView indexPathForCell:sender];
-    [self.arrayOfTrack removeObjectAtIndex:indepath.row];
-    [self.tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indepath]
+    NSIndexPath *indexpath = [self.tableView indexPathForCell:sender];
+    [self.arrayOfTrack removeObjectAtIndex:indexpath.row];
+    [self.tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexpath]
                           withRowAnimation:UITableViewRowAnimationLeft];
     [self.tableView reloadData];
 }
@@ -102,16 +99,19 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
-- (IBAction)play:(id)sender {
+- (void) playSong:(id)sender{
+    NSIndexPath *indexpath = [self.tableView indexPathForCell:sender];
+    
     NSError *error1;
-    NSData *songFile = [[NSData alloc] initWithContentsOfURL:[NSURL URLWithString:@"http://dc424.4shared.com/img/827830064/127ba0d9/dlink__2Fdownload_2Fj8emrNnO_3Ftsid_3D20131024-102604-b2892b10/preview.mp3"]  options:NSDataReadingMappedIfSafe error:&error1 ];
+    NSData *songFile = [[NSData alloc] initWithContentsOfURL:[self.arrayOfTrack[indexpath.row] urlMp3]
+                                                      options:NSDataReadingMappedIfSafe error:&error1];
     self.audioPlayer = [[AVAudioPlayer alloc] initWithData:songFile error:&error1];
     [self.audioPlayer play];
 
     
 }
 
-- (IBAction)stop:(id)sender {
+- (void) stopSong:(id)sender{
     [self.audioPlayer stop];
 }
 @end

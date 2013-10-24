@@ -31,8 +31,16 @@
 }
 
 - (IBAction)deleteTapped:(id)sender {
-    
     [self.delegate deleteButtonTappedOnCell:self];
+}
+
+- (IBAction)playSong:(id)sender {
+    [self.delegate playSong:self];
+}
+
+
+- (IBAction)stopSong:(id)sender {
+    [self.delegate stopSong:self];
 }
 
 @end

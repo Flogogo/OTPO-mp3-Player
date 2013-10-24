@@ -33,7 +33,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="tEF-mW-Ols">
-                                                    <rect key="frame" x="115" y="44" width="91" height="25"/>
+                                                    <rect key="frame" x="152" y="51" width="43" height="18"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="13"/>
                                                     <state key="normal" title="Delete">
@@ -50,23 +50,23 @@
                                                     <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="KcU-ll-of8">
-                                                    <rect key="frame" x="214" y="41" width="34" height="31"/>
+                                                    <rect key="frame" x="227" y="41" width="34" height="31"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" backgroundImage="PlayButton.png">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <connections>
-                                                        <action selector="play:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Zm7-x4-KPq"/>
+                                                        <action selector="playSong:" destination="4yC-sJ-A79" eventType="touchUpInside" id="14m-Be-8BV"/>
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="piH-fp-eV6">
-                                                    <rect key="frame" x="256" y="41" width="31" height="31"/>
+                                                    <rect key="frame" x="269" y="41" width="31" height="31"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" backgroundImage="stop.png">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <connections>
-                                                        <action selector="stop:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="0ct-dM-LsU"/>
+                                                        <action selector="stopSong:" destination="4yC-sJ-A79" eventType="touchUpInside" id="Jsr-Hq-F2E"/>
                                                     </connections>
                                                 </button>
                                             </subviews>

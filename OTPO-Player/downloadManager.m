@@ -24,7 +24,7 @@
     self = [super init];
     if (self)
     {
-        NSURLRequest *scriptUpdateJson = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.otpo.fr/index.php/News/news_control/all_new"]];
+        NSURLRequest *scriptUpdateJson = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.otpo.fr/index.php/News/news_control/index"]];
         NSURLConnection *connection = [[NSURLConnection alloc] initWithRequest:scriptUpdateJson delegate:self startImmediately:YES];
         
         _arrayOfTrack = nil;
