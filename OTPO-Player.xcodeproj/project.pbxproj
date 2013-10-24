@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1766DA2718196AEA004BEA86 /* stop.png in Resources */ = {isa = PBXBuildFile; fileRef = 1766DA2618196AEA004BEA86 /* stop.png */; };
+		17A71270181921FE00A2EDBE /* PlayButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 17A7126F181921FE00A2EDBE /* PlayButton.png */; };
 		17C82CE91817B2D100D4F952 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17C82CE81817B2D100D4F952 /* Foundation.framework */; };
 		17C82CEB1817B2D100D4F952 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17C82CEA1817B2D100D4F952 /* CoreGraphics.framework */; };
 		17C82CED1817B2D100D4F952 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17C82CEC1817B2D100D4F952 /* UIKit.framework */; };
@@ -38,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1766DA2618196AEA004BEA86 /* stop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stop.png; sourceTree = "<group>"; };
+		17A7126F181921FE00A2EDBE /* PlayButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PlayButton.png; sourceTree = "<group>"; };
 		17C82CE51817B2D100D4F952 /* OTPO-Player.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OTPO-Player.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		17C82CE81817B2D100D4F952 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		17C82CEA1817B2D100D4F952 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -91,9 +95,57 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		17A7126A181920CE00A2EDBE /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				1766DA2618196AEA004BEA86 /* stop.png */,
+				17A7126F181921FE00A2EDBE /* PlayButton.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		17A71271181922E700A2EDBE /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				17C82D231817B39C00D4F952 /* trackInfo.h */,
+				17C82D241817B39C00D4F952 /* trackInfo.m */,
+			);
+			name = Entity;
+			sourceTree = "<group>";
+		};
+		17A71272181922F600A2EDBE /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				17C82D1F1817B39C00D4F952 /* homeViewController.h */,
+				17C82D201817B39C00D4F952 /* homeViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		17A712731819230200A2EDBE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				17C82D1D1817B39C00D4F952 /* downloadManager.h */,
+				17C82D1E1817B39C00D4F952 /* downloadManager.m */,
+				17C82D2C1817BC6F00D4F952 /* jsonRetriever.h */,
+				17C82D2D1817BC6F00D4F952 /* jsonRetriever.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		17A71274181928AB00A2EDBE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				17C82D211817B39C00D4F952 /* TableCell.h */,
+				17C82D221817B39C00D4F952 /* TableCell.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		17C82CDC1817B2D100D4F952 = {
 			isa = PBXGroup;
 			children = (
+				17A7126A181920CE00A2EDBE /* Images */,
 				17C82CEE1817B2D100D4F952 /* OTPO-Player */,
 				17C82D0D1817B2D200D4F952 /* OTPO-PlayerTests */,
 				17C82CE71817B2D100D4F952 /* Frameworks */,
@@ -124,16 +176,10 @@
 		17C82CEE1817B2D100D4F952 /* OTPO-Player */ = {
 			isa = PBXGroup;
 			children = (
-				17C82D1D1817B39C00D4F952 /* downloadManager.h */,
-				17C82D1E1817B39C00D4F952 /* downloadManager.m */,
-				17C82D2C1817BC6F00D4F952 /* jsonRetriever.h */,
-				17C82D2D1817BC6F00D4F952 /* jsonRetriever.m */,
-				17C82D1F1817B39C00D4F952 /* homeViewController.h */,
-				17C82D201817B39C00D4F952 /* homeViewController.m */,
-				17C82D211817B39C00D4F952 /* TableCell.h */,
-				17C82D221817B39C00D4F952 /* TableCell.m */,
-				17C82D231817B39C00D4F952 /* trackInfo.h */,
-				17C82D241817B39C00D4F952 /* trackInfo.m */,
+				17A71274181928AB00A2EDBE /* View */,
+				17A712731819230200A2EDBE /* Models */,
+				17A71272181922F600A2EDBE /* Controllers */,
+				17A71271181922E700A2EDBE /* Entity */,
 				17C82CF71817B2D100D4F952 /* AppDelegate.h */,
 				17C82CF81817B2D100D4F952 /* AppDelegate.m */,
 				17C82CFA1817B2D100D4F952 /* Main.storyboard */,
@@ -249,8 +295,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				17C82D011817B2D100D4F952 /* Images.xcassets in Resources */,
+				1766DA2718196AEA004BEA86 /* stop.png in Resources */,
 				17C82CF31817B2D100D4F952 /* InfoPlist.strings in Resources */,
 				17C82CFC1817B2D100D4F952 /* Main.storyboard in Resources */,
+				17A71270181921FE00A2EDBE /* PlayButton.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
