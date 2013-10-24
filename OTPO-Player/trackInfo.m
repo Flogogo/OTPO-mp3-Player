@@ -24,8 +24,8 @@
     {
         _dataPicture = [[NSMutableData alloc] initWithCapacity:0];
         _dataMp3 = [[NSMutableData alloc] initWithCapacity:0];
-        _urlPicture = urlImg;
-        _urlMp3 = @"";
+        _urlPicture = [[NSURL alloc] initWithString:urlImg] ;
+        _urlMp3 = [[NSURL alloc] initWithString:@"http://www.otpo.fr/mp3/test.mp3"];
         _titreMp3 = titleSong;
     }
     return self;
