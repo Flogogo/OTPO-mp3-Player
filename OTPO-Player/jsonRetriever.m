@@ -1,10 +1,10 @@
-//
-//  jsonRetriever.m
-//  OTPO-Player
-//
-//  Created by Gomis Florian on 10/23/13.
-//  Copyright (c) 2013 Gomis Florian. All rights reserved.
-//
+/**
+ * \brief Retrieve Json From server web and create an array of trackInfo Object
+ *
+ * \todo
+ * \args One argument : The url of the Json File on the server web
+ * \return to DownloadManager in order to download Data of Image and Mp3
+ */
 
 #import "jsonRetriever.h"
 
@@ -88,6 +88,9 @@
                 [self.arrayOfTrack addObject: [[trackInfo alloc] initWithUrlImg:[NSString stringWithFormat:@"%@%@",T1,T2] AndWith:[self.jsonArray[i] valueForKey:@"titre_new"]]];
             }
             
+            for (int i = 0; i < [object count]; i++) {
+                NSLog(@"%@", [self.arrayOfTrack[i] urlPicture]);
+            }
             [[NSNotificationCenter defaultCenter]
              postNotificationName:@"jsonLoaded"
              object:self];
