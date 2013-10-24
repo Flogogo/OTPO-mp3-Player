@@ -33,7 +33,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="tEF-mW-Ols">
-                                                    <rect key="frame" x="156" y="44" width="91" height="25"/>
+                                                    <rect key="frame" x="115" y="44" width="91" height="25"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="13"/>
                                                     <state key="normal" title="Delete">
@@ -47,7 +47,28 @@
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="h33-BN-5gt">
                                                     <rect key="frame" x="15" y="4" width="112" height="65"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
                                                 </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="KcU-ll-of8">
+                                                    <rect key="frame" x="214" y="41" width="34" height="31"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" backgroundImage="PlayButton.png">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="play:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Zm7-x4-KPq"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="piH-fp-eV6">
+                                                    <rect key="frame" x="256" y="41" width="31" height="31"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" backgroundImage="stop.png">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="stop:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="0ct-dM-LsU"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <color key="tintColor" red="0.66528614585331969" green="1" blue="0.63713910971108845" alpha="1" colorSpace="calibratedRGB"/>
                                         </tableViewCellContentView>
@@ -70,6 +91,10 @@
             <point key="canvasLocation" x="-93" y="74"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="PlayButton.png" width="602" height="601"/>
+        <image name="stop.png" width="300" height="300"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
