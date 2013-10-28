@@ -13,7 +13,7 @@
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) downloadManager *downloadManager;
 @property (strong, nonatomic) NSMutableArray *arrayOfTrack;
-@property (strong, nonatomic) AVAudioPlayer *audioPlayer;
+@property (strong, nonatomic) AVPlayer *audioPlayer;
 @end
 
 @implementation homeViewController
@@ -85,7 +85,7 @@
     NSIndexPath *indexpath = [self.tableView indexPathForCell:sender];
     [self.arrayOfTrack removeObjectAtIndex:indexpath.row];
     [self.tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexpath]
-                          withRowAnimation:UITableViewRowAnimationLeft];
+                          withRowAnimation:UITableViewRowAnimationFade];
     [self.tableView reloadData];
 }
 
@@ -101,17 +101,11 @@
 
 - (void) playSong:(id)sender{
     NSIndexPath *indexpath = [self.tableView indexPathForCell:sender];
-    
-    NSError *error1;
-    NSData *songFile = [[NSData alloc] initWithContentsOfURL:[self.arrayOfTrack[indexpath.row] urlMp3]
-                                                      options:NSDataReadingMappedIfSafe error:&error1];
-    self.audioPlayer = [[AVAudioPlayer alloc] initWithData:songFile error:&error1];
+    self.audioPlayer = [[AVPlayer alloc] initWithURL:[self.arrayOfTrack[indexpath.row] urlMp3]];
     [self.audioPlayer play];
-
-    
 }
 
 - (void) stopSong:(id)sender{
-    [self.audioPlayer stop];
+    [self.audioPlayer pause];
 }
 @end

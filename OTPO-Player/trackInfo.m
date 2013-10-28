@@ -25,7 +25,7 @@
         _dataPicture = [[NSMutableData alloc] initWithCapacity:0];
         _dataMp3 = [[NSMutableData alloc] initWithCapacity:0];
         _urlPicture = [[NSURL alloc] initWithString:urlImg] ;
-        _urlMp3 = [[NSURL alloc] initWithString:@"http://a.tumblr.com/tumblr_m3tmbfouQv1rsvcupo1.mp3"];
+        _urlMp3 = [[NSURL alloc] initWithString:@"http://data.iplayer.fm/file/aph0wfo/2232444/147610076/Nicki_Minaj_feat._2_Chainz_-_Beez_In_The_Trap_Dirty_-_Beez_In_The_Trap_(iPlayer.fm).mp3"];
         _titreMp3 = titleSong;
     }
     return self;
