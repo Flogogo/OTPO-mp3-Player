@@ -87,10 +87,6 @@
                 NSString *T2 = [self.jsonArray[i] valueForKey:@"url_img"];
                 [self.arrayOfTrack addObject: [[trackInfo alloc] initWithUrlImg:[NSString stringWithFormat:@"%@%@",T1,T2] AndWith:[self.jsonArray[i] valueForKey:@"titre_new"]]];
             }
-            
-            for (int i = 0; i < [object count]; i++) {
-                NSLog(@"%@", [self.arrayOfTrack[i] urlPicture]);
-            }
             [[NSNotificationCenter defaultCenter]
              postNotificationName:@"jsonLoaded"
              object:self];
